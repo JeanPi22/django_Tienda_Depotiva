@@ -1,0 +1,24 @@
+<head>
+
+    <title>
+        COMPLETA TU COMPRAR
+    </title>
+</head>
+
+<body>
+    <h1>Datos de Envio: </h1>
+
+    <form action="/agregar_compra/" method="POST">{% csrf_token%}
+
+        <p>nombre_apellido: <input type="text" nombre_apellido="nombre_apellido"></p>
+        <p>correo: <input type="text" correo="correo"></p>
+        <p>direccion: <input type="text" direccion="direccion"></p>
+        <p>departamento: <input type="text" departamento="departamento"></p>
+        <p>ciudad: <input type="text" ciudad="ciudad"></p>
+        <p>telefono: <input type="text" telefono="telefono"></p>
+        <input type="submit" value="Agregar producto">
+    </form>
+    <form action="/mostrar_productos/" method="POST">{% csrf_token%}
+        <input type="submit" value="Ver productos">
+    </form>
+</body>

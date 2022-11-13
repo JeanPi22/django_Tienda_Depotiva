@@ -19,5 +19,6 @@ from gestion_ventas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("ver_productos/", views.ver_productos )
+    path("ver_productos/", views.ver_productos),
+    path("agregar_comprar/", views.agregar_compra)
 ]

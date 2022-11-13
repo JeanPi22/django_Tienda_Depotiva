@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h2 style="text-align:center"> Nuestros Productos </h2>
+    <h2 style="text-align:center"> Nuestros Productos </h2>    
     <table align="center" style="margin: 0px auto;">
         <thead>
             <tr>
@@ -19,6 +19,7 @@
                 <th>Nombre</th>
                 <th>Costo</th>
                 <th>Stock</th>
+                <th>imagen</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@
                 <td>{{producto.nombre}}</td>
                 <td>{{producto.costo}}</td>
                 <td>{{producto.cantidad_stock}}</td>
+                <td>{{producto.imagen}}</td>
             {% endfor %}
         </tbody>
     </table>
