@@ -2,17 +2,20 @@ from django.shortcuts import render, redirect
 from gestion_ventas.models import Productos, Cliente
 from django.http import HttpResponse
 
-# Create your views here.
-
-def prueba(request):
-    return HttpResponse("<h1>Bienvenido</h1>")        
+# Create your views here.      
 
 def Inicio(request):
     return render(request, "inicio.html")
 
+
 def ver_productos(request):
     productos = Productos.objects.all()
     return render(request, "ver_productos.html", {'productos': productos})
+
+
+def form_compra(request):
+    return render(request, "comprar_producto.html")
+
 
 def agregar_compra(request):
     if request.method == "POST":
@@ -27,4 +30,6 @@ def agregar_compra(request):
         data.save()
         return redirect("/ver_productos/")
     else:
-        return render(request, "comprar.html")
+        return render(request, "comprar_producto.html")
+
+
