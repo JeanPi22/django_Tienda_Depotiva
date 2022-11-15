@@ -1,7 +1,14 @@
 from django.shortcuts import render, redirect
 from gestion_ventas.models import Productos, Cliente
+from django.http import HttpResponse
 
 # Create your views here.
+
+def prueba(request):
+    return HttpResponse("<h1>Bienvenido</h1>")        
+
+def Inicio(request):
+    return render(request, "inicio.html")
 
 def ver_productos(request):
     productos = Productos.objects.all()
