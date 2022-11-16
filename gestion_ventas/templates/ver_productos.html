@@ -8,13 +8,13 @@
     {% for producto in productos %}
     <div class="col">
         <div class="card shadow-sm">
-            <img class="" thumbnail" src="{{producto.imagen}}">
+            <img class="" thumbnail" src="{{producto.imagen.url}}">
             <div class="card-body">
                 <h5 class="card-title">{{producto.nombre}}</h5>
                 <p class="card-text">${{producto.costo}}</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <a name="" id="" class="btn btn-primary" href="{% url 'form_compra'%}" role="button">Comprar</a>                        
+                        <a name="" id="" class="btn btn-primary" href="{% url 'agregar_compra'%}" role="button">Comprar</a>                        
                     </div>
                 </div>
             </div>

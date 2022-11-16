@@ -15,45 +15,46 @@
     <div class="col-md-7 col-lg-8">
         <div class="container">
 
-            <form class="row g-3 mt-3" , action="/agregar_compra/" method="POST">{% csrf_token%}
+            <h1 style="text-align:center; color:red; margin-top: 3;" ,>Datos de Envío: </h1>
 
-                <h1 style="text-align:center; color:red; margin-top: 3;" ,>Datos de Envío: </h1>
+            <form class="row g-3 mt-3" action="/agregar_compra/" method="POST">{% csrf_token%}                
 
                 <div class="col-10">
                     <label for="nombre_apellido" class="form-label">Nombres y Apellidos</label>
-                    <input type="nombre_apellido" class="form-control" id="nombre_apellido"
+                    <input type="text" class="form-control" name="nombre_apellido"
                         placeholder="Escriba nombres y apellidos">
                 </div>
 
                 <div class="col-10">
                     <label for="correo" class="form-label">Correo</label>
-                    <input type="correo" class="form-control" id="correo" placeholder="you@example.com">
+                    <input type="text" class="form-control" name="correo" placeholder="you@example.com">
                 </div>
 
                 <div class="col-10">
                     <label for="direccion" class="form-label">Dirección</label>
-                    <input type="direccion" class="form-control" id="direccion" placeholder="Escriba su dirección">
+                    <input type="text" class="form-control" name="direccion" placeholder="Escriba su dirección">
                 </div>
 
                 <div class="col-lg-5">
                     <label for="departamento" class="form-label">Departamento</label>
-                    <input type="departamento" class="form-control" id="departamento"
+                    <input type="text" class="form-control" name="departamento"
                         placeholder="Escriba su departamento">
                 </div>
 
                 <div class="col-5">
                     <label for="ciudad" class="form-label">Ciudad</label>
-                    <input type="ciudad" class="form-control" id="ciudad" placeholder="Escriba su ciudad">
+                    <input type="text" class="form-control" name="ciudad" placeholder="Escriba su ciudad">
                 </div>
 
                 <div class="col-5">
                     <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="telefono" class="form-control" id="telefono" placeholder="Escriba su telefono">
+                    <input type="text" class="form-control" name="telefono" placeholder="Escriba su telefono">
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary"> Comprar</button>
+                    <input type="submit" class="btn btn-primary" value="Comprar">
                 </div>
+
             </form>
         </div>
 
